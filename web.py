@@ -14,7 +14,7 @@ def search_by_id(id):
             'error': None,
             'data': youtube.video(id)
         })
-    except Exception, e:
+    except e:
         raise ApiException(e)
     
 @app.route('/download/<id>/')
